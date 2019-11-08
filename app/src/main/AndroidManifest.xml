@@ -19,6 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity android:name=".view.activity.DetailsActivity"/>
+        <activity android:name=".view.activity.WriteActivcity"/>
+
+
+        <activity android:name=".view.activity.SeatbuyingActivity"/>
     </application>
+
 
 </manifest>

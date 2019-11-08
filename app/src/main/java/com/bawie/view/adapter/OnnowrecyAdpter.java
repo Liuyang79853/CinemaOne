@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bawie.R;
 import com.bawie.model.OnnowBean;
+import com.bawie.view.activity.DetailsActivity;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
@@ -33,7 +34,7 @@ public class OnnowrecyAdpter extends RecyclerView.Adapter {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.onnowitem,null);
-       ViewHolder viewHoler=new ViewHolder(view);
+        ViewHolder viewHoler=new ViewHolder(view);
         return viewHoler;
     }
 
@@ -47,9 +48,9 @@ public class OnnowrecyAdpter extends RecyclerView.Adapter {
             @Override
             public void onClick(View v) {
                 int movieId = result.get(i).movieId;
-                //Intent intent = new Intent(context, DetailsActivity.class);
-                //intent.putExtra("movieId",movieId);
-                //context.startActivity(intent);
+                Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("movieId",movieId);
+                context.startActivity(intent);
             }
         });
     }

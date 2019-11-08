@@ -154,6 +154,136 @@ import retrofit2.converter.gson.GsonConverterFactory;
                     }
                 });
     }
+    //推荐影院
+    public void getTuijian(final CallBack callBack){
+        api.gettuijian()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<TuijianBean>() {
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(TuijianBean tuijianBean) {
+                        callBack.ok(tuijianBean);
+                    }
+                });
+    }
+    //附近影院
+    public void getFujin(final CallBack callBack){
+        api.getfujin()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<FujinBean>() {
+
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(FujinBean fujinBean) {
+                        callBack.ok(fujinBean);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+                    }
+                });
+    }
+    //影片详情
+    public void datailsgetdata(int userId, String sessionId, int movieId, final CallBack callBack){
+        api.getDetails(userId, sessionId, movieId).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<DetailsBean>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(DetailsBean detailsBean) {
+                        callBack.ok(detailsBean);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+    //影片评论
+    public void commentdata(int movieId, final CallBack callBack){
+        api.getComments(movieId,1,10).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<CommentsBean>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(CommentsBean commentsBean) {
+                callBack.ok(commentsBean);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+    }
+
+    public void writerReviewsget(int userid, String sessionId, int movieId, String commentContent, double score, final CallBack callBack){
+        api.getWriter(userid,sessionId,movieId,commentContent,score).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<WriterreviewsBean>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(WriterreviewsBean writerreviewsBean) {
+                callBack.ok(writerreviewsBean);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                WriterreviewsBean ww = new WriterreviewsBean();
+                ww.message=e.getMessage();
+                callBack.ok(ww);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+    }
 
 
     public interface CallBack<B> {

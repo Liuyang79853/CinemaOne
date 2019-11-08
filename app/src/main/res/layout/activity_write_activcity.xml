@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090330"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ping_name"
+        android:text="风暴三"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:textSize="25dp"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="评价："
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RatingBar
+            android:id="@+id/ping_count"
+            android:progressTint="#ffc600"
+            android:secondaryProgressTint="#ffc600"
+            android:progressBackgroundTint="#e2e2e2"
+            android:layout_alignParentRight="true"
+            android:stepSize="1"
+            android:rating="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/yuanjiao"
+        >
+
+        <EditText
+            android:layout_marginLeft="15dp"
+            android:id="@+id/ping_neirong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/pingjia_tijiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:background="#e60974"
+        android:text="提交评论"
+        />
+</LinearLayout>

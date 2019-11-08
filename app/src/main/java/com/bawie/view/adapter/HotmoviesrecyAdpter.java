@@ -31,7 +31,7 @@ public class HotmoviesrecyAdpter extends RecyclerView.Adapter {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.hotmovieitem,null);
-       ViewHolder viewHoler=new ViewHolder(view);
+        ViewHolder viewHoler=new ViewHolder(view);
         return viewHoler;
     }
 
@@ -48,7 +48,7 @@ public class HotmoviesrecyAdpter extends RecyclerView.Adapter {
             public void onClick(View v) {
                 int movieId = result.get(i).movieId;
                 //Intent intent = new Intent(context, DetailsActivity.class);
-               // intent.putExtra("movieId",movieId);
+                // intent.putExtra("movieId",movieId);
                 //context.startActivity(intent);
             }
         });
@@ -62,7 +62,7 @@ public class HotmoviesrecyAdpter extends RecyclerView.Adapter {
         return result.size();
     }
     private class ViewHolder extends RecyclerView.ViewHolder{
-//        private final ImageView bigimg;
+        //        private final ImageView bigimg;
         private final TextView text;
         private final ImageView image;
 

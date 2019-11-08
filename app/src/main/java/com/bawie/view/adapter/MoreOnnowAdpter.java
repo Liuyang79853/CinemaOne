@@ -1,23 +1,23 @@
 package com.bawie.view.adapter;
 
+
 import android.content.Context;
 import android.content.Intent;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bawie.R;
 import com.bawie.model.OnnowBean;
+import com.bawie.view.activity.DetailsActivity;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class MoreOnnowAdpter extends RecyclerView.Adapter {
     private List<OnnowBean.ResultBean> result;
@@ -33,7 +33,7 @@ public class MoreOnnowAdpter extends RecyclerView.Adapter {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.upcomingitem,null);
-       ViewHolder viewHoler=new ViewHolder(view);
+        ViewHolder viewHoler=new ViewHolder(view);
         return viewHoler;
     }
 
@@ -47,9 +47,9 @@ public class MoreOnnowAdpter extends RecyclerView.Adapter {
             @Override
             public void onClick(View v) {
                 int movieId = result.get(i).movieId;
-                //Intent intent = new Intent(context, DetailsActivity.class);
-                //intent.putExtra("movieId",movieId);
-                //context.startActivity(intent);
+                Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("movieId",movieId);
+                context.startActivity(intent);
             }
         });
     }

@@ -22,3 +22,6 @@ public class FragmentThree extends Fragment {
         return inflate;
     }
 }
+
+
+

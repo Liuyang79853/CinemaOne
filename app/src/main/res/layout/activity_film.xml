@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#081033"
+    tools:context=".view.activity.FilmActivity">
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#1c2243">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_movies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="24dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="60dp"
+                android:text="电影"
+                android:background="@drawable/home_btn"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:textColor="#e8185e"
+                android:textSize="@dimen/sp_14" />
+
+            <RadioButton
+                android:id="@+id/rb_movies"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bian1"
+                android:button="@null"
+                android:checked="true" />
+            <TextView
+                android:id="@+id/tv_cinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="126dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="60dp"
+                android:text="影院"
+                android:visibility="invisible"
+                android:background="@drawable/home_btn"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:textColor="#e8185e"
+                android:textSize="@dimen/sp_14" />
+            <RadioButton
+                android:id="@+id/rb_cinema"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="146dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bian2"
+                android:button="@null" />
+            <TextView
+                android:id="@+id/tv_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="228dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="60dp"
+                android:text="我的"
+                android:background="@drawable/home_btn"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:textColor="#e8185e"
+                android:visibility="invisible"
+                android:textSize="@dimen/sp_14" />
+
+            <RadioButton
+                android:id="@+id/rb_mine"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="248dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bian3"
+                android:button="@null" />
+        </RelativeLayout>
+    </RadioGroup>
+</RelativeLayout>

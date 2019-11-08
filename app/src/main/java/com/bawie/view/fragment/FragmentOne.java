@@ -124,7 +124,6 @@ public class FragmentOne extends Fragment implements IMainView.banner, IMainView
     @Override
     public void recyview(OnnowBean onnowBean) {
         //正在热映
-        Log.e("aaa", "" + onnowBean.result.get(0).name);
         List<OnnowBean.ResultBean> result = onnowBean.result;
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -137,7 +136,6 @@ public class FragmentOne extends Fragment implements IMainView.banner, IMainView
     public void recyview2(UpcomingBean upcomingBean) {
         //即将上映
         List<UpcomingBean.ResultBean> result2 = upcomingBean.result;
-        Log.i("121212", "recyview2: " + result2.get(1).name);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         from1Recy2.setLayoutManager(linearLayoutManager);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);

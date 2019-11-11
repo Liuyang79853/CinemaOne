@@ -41,7 +41,7 @@
         <com.stx.xhb.xbanner.XBanner
             android:id="@+id/banner"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="200dp"
             android:padding="@dimen/dp_10"
             app:isClipChildrenMode="true" />
 
@@ -69,7 +69,8 @@
                 android:id="@+id/zzgd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="320dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
                 android:text="更多"
                 android:textColor="#fff"
                 android:textSize="18dp" />
@@ -104,7 +105,8 @@
                 android:id="@+id/jjgd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="320dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
                 android:text="更多"
                 android:textColor="#fff"
                 android:textSize="18dp" />
@@ -139,7 +141,8 @@
                 android:id="@+id/rmgd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="320dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
                 android:text="更多"
                 android:textColor="#fff"
                 android:textSize="18dp" />
@@ -147,20 +150,20 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="450dp">
+            android:layout_height="550dp">
 
             <ImageView
                 android:id="@+id/bigimage"
-                android:layout_width="500dp"
-                android:layout_height="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal" />
 
             <Button
                 android:layout_width="45dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="330dp"
-                android:layout_marginTop="130dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:background="#F44336"
                 android:text="购票"
                 android:textColor="#fff" />
@@ -168,8 +171,9 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/from1_recy3"
                 android:layout_width="match_parent"
+                android:layout_below="@id/bigimage"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="200dp" />
+                />
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
